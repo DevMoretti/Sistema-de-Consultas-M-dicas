@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Consultas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Consultas Médicas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Menu Principal</a></li>
+                <li><a href="incluir-consulta.html">Incluir Consulta</a></li>
+                <li><a href="alterar-consulta.html">Alterar Consulta</a></li>
+                <li><a href="excluir-consulta.html">Excluir Consulta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pesquisar-consultas">
+            <h2>Pesquisar Consultas</h2>
+            <form>
+                <label for="criterios">Critérios de Pesquisa:</label>
+                <input type="text" id="criterios" name="criterios" placeholder="Nome do paciente, data, diagnóstico..." required>
+                <button type="submit">Pesquisar</button>
+            </form>
+
+            <!-- Lista de consultas ou mensagem de erro -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Médico</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Diagnóstico</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maria Silva</td>
+                        <td>Dr. João</td>
+                        <td>12/09/2024</td>
+                        <td>10:00</td>
+                        <td>Hipertensão</td>
+                        <td>
+                            <a href="alterar-consulta.html">Alterar</a>
+                            <button>Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Outros registros de consulta -->
+                </tbody>
+            </table>
+
+            <!-- Mensagem se nenhuma consulta for encontrada -->
+            <p>Nenhuma consulta encontrada com os parâmetros fornecidos.</p>
+        </section>
+    </main>
+</body>
+</html>
